@@ -1,0 +1,30 @@
+.navbar-brand a {
+	color: #FF9900;
+}
+.main {
+	font-family: 'Open Sans' sans-serif;
+}
+
+.main ul {
+	list-style-type: none;
+
+}
+
+.navbar {
+	background-color: #222;
+}
+.jumbotron {
+	margin-bottom: -20px;
+	background-color: #ffb648;
+}
+.jumbotron h1{
+    text-align: center;
+    color: #222;
+}
+.main {
+	text-align: center;
+	background-color: #FAFAFA;
+}
+.takenote-footer {
+	text-align: center;
+}

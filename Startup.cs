@@ -41,7 +41,7 @@ namespace sebswebsdotnetcore
                 app.UseExceptionHandler("/Home/Error");
             }
 
-            app.UseStaticFiles();
+            app.UseFileServer();
 
             app.UseMvc(routes =>
             {
