@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.StaticFiles;
 
 namespace sebswebsdotnetcore
 {
@@ -42,6 +43,14 @@ namespace sebswebsdotnetcore
             }
 
             app.UseFileServer();
+            
+            StaticFileOptions option = new StaticFileOptions();
+
+            FileExtensionContentTypeProvider contentTypeProvider = (FileExtensionContentTypeProvider)option.ContentTypeProvider ??
+            new FileExtensionContentTypeProvider();
+            contentTypeProvider.Mappings.Add(".unityweb", "application/octet-stream");
+            option.ContentTypeProvider = contentTypeProvider;
+            app.UseStaticFiles(option);
 
             app.UseMvc(routes =>
             {

@@ -24,10 +24,29 @@
 
   <ItemGroup>
     <None Remove="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Remove="Properties\PublishProfiles\sebswebs.com - Web Deploy.pubxml" />
+    <None Remove="Properties\PublishProfiles\socalweed.net - Web Deploy.pubxml" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Views\Game\index.cshtml" />
     <None Include="Views\Home\Index.cshtml" />
+    <None Include="wwwroot\Build\SebsGame.asm.code.unityweb" />
+    <None Include="wwwroot\Build\SebsGame.asm.framework.unityweb" />
+    <None Include="wwwroot\Build\SebsGame.asm.memory.unityweb" />
+    <None Include="wwwroot\Build\SebsGame.data.unityweb" />
+    <None Include="wwwroot\Build\UnityLoader.js" />
+    <None Include="wwwroot\TemplateData\favicon.ico" />
+    <None Include="wwwroot\TemplateData\fullscreen.png" />
+    <None Include="wwwroot\TemplateData\progressEmpty.Dark.png" />
+    <None Include="wwwroot\TemplateData\progressEmpty.Light.png" />
+    <None Include="wwwroot\TemplateData\progressFull.Dark.png" />
+    <None Include="wwwroot\TemplateData\progressFull.Light.png" />
+    <None Include="wwwroot\TemplateData\progressLogo.Dark.png" />
+    <None Include="wwwroot\TemplateData\progressLogo.Light.png" />
+    <None Include="wwwroot\TemplateData\style.css" />
+    <None Include="wwwroot\TemplateData\UnityProgress.js" />
+    <None Include="wwwroot\TemplateData\webgl-logo.png" />
   </ItemGroup>
 
   <ItemGroup>

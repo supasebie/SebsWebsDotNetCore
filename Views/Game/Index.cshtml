@@ -1,16 +1,39 @@
-﻿
-@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
-
-<html>
+﻿<!DOCTYPE html>
+<html lang="en-us">
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <!-- Google Analytics -->
+    <script>
+        window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+        ga('create', 'UA-83724863-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>SebsWebs | Welcome to my game demo</title>
+    <author>SebWebs | Sebastian Ruiz</author>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="~/TemplateData/UnityProgress.js"></script>
+    <script src="~/Build/UnityLoader.js"></script>
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/layout.css">
+
+    <script>
+        var gameInstance = UnityLoader.instantiate("gameContainer", "Build/SebsGame.json", { onProgress: UnityProgress });
+    </script>
+
 </head>
-<body>
-    This is a test
+<body class="row banner">
+    <div class="webgl-content">
+        <div id="gameContainer" style="width: 960px; height: 600px"></div>
+        <div class="footer">
+            <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+            <div class="title">Seb's WEBGL Platform Demo Running on .Net Core 2.0</div>
+            <div class="title"> A, W, S, D for movement. Spacebar to jump.</div>
+        </div>
+    </div>
 </body>
 </html>
